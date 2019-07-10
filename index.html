@@ -318,6 +318,10 @@
 <h3 id="3-CTRL-1"><a href="#3-CTRL-1" class="headerlink" title="3. CTRL + 1"></a>3. CTRL + 1</h3><p>当前文件相关的父类、子类、类别、协议、包含的头文件等信息</p>
 <h3 id="4-option-command-F"><a href="#4-option-command-F" class="headerlink" title="4. option+command+F"></a>4. option+command+F</h3><p>当前文件字符串替换。</p>
 <h3 id="5-Option-command-L"><a href="#5-Option-command-L" class="headerlink" title="5. Option+ command+L"></a>5. Option+ command+L</h3><p>跳到光标所在位置</p>
+<h3 id="6-自定义复制当前行"><a href="#6-自定义复制当前行" class="headerlink" title="6. 自定义复制当前行"></a>6. 自定义复制当前行</h3><p>修改权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 666 /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Resources/IDETextKeyBindingSet.plist</span><br><span class="line">sudo chmod 777 /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Resources/</span><br></pre></td></tr></table></figure></p>
+<p>打开编辑<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Resources/IDETextKeyBindingSet.plist</span><br></pre></td></tr></table></figure></p>
+<p>找到 <code>Insertions and Indentations</code><br>添加 <code>Duplicate Current Line</code> 以及对应的值 <code>selectLine:, copy:, moveToEndOfLine:, moveToBeginningOfLine:, paste:</code></p>
+<p>重启<code>Xcode</code>, 在设置里边找到 <code>preferences</code>, 搜索 <code>Duplicate Current Line</code>, 然后设置对应的快捷键 <code>CMD+D</code>(可随意设置)即可</p>
 
           
         

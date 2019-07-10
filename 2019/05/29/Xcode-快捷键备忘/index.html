@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="1. Option+点击文件在同一个 window 以并列窗口打开文件 2. shift+ Option+点击文件新建一个 window 窗口来打开文件 3. CTRL + 1当前文件相关的父类、子类、类别、协议、包含的头文件等信息 4. option+command+F当前文件字符串替换。 5. Option+ command+L跳到光标所在位置">
+<meta name="description" content="1. Option+点击文件在同一个 window 以并列窗口打开文件 2. shift+ Option+点击文件新建一个 window 窗口来打开文件 3. CTRL + 1当前文件相关的父类、子类、类别、协议、包含的头文件等信息 4. option+command+F当前文件字符串替换。 5. Option+ command+L跳到光标所在位置 6. 自定义复制当前行修改权限12sudo ch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Xcode 快捷键备忘">
 <meta property="og:url" content="https://ycditchf.github.io/2019/05/29/Xcode-快捷键备忘/index.html">
 <meta property="og:site_name" content="Simon Blog">
-<meta property="og:description" content="1. Option+点击文件在同一个 window 以并列窗口打开文件 2. shift+ Option+点击文件新建一个 window 窗口来打开文件 3. CTRL + 1当前文件相关的父类、子类、类别、协议、包含的头文件等信息 4. option+command+F当前文件字符串替换。 5. Option+ command+L跳到光标所在位置">
+<meta property="og:description" content="1. Option+点击文件在同一个 window 以并列窗口打开文件 2. shift+ Option+点击文件新建一个 window 窗口来打开文件 3. CTRL + 1当前文件相关的父类、子类、类别、协议、包含的头文件等信息 4. option+command+F当前文件字符串替换。 5. Option+ command+L跳到光标所在位置 6. 自定义复制当前行修改权限12sudo ch">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-29T04:25:18.328Z">
+<meta property="og:updated_time" content="2019-07-10T15:36:05.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xcode 快捷键备忘">
-<meta name="twitter:description" content="1. Option+点击文件在同一个 window 以并列窗口打开文件 2. shift+ Option+点击文件新建一个 window 窗口来打开文件 3. CTRL + 1当前文件相关的父类、子类、类别、协议、包含的头文件等信息 4. option+command+F当前文件字符串替换。 5. Option+ command+L跳到光标所在位置">
+<meta name="twitter:description" content="1. Option+点击文件在同一个 window 以并列窗口打开文件 2. shift+ Option+点击文件新建一个 window 窗口来打开文件 3. CTRL + 1当前文件相关的父类、子类、类别、协议、包含的头文件等信息 4. option+command+F当前文件字符串替换。 5. Option+ command+L跳到光标所在位置 6. 自定义复制当前行修改权限12sudo ch">
 
 
 
@@ -314,6 +314,10 @@
 <h3 id="3-CTRL-1"><a href="#3-CTRL-1" class="headerlink" title="3. CTRL + 1"></a>3. CTRL + 1</h3><p>当前文件相关的父类、子类、类别、协议、包含的头文件等信息</p>
 <h3 id="4-option-command-F"><a href="#4-option-command-F" class="headerlink" title="4. option+command+F"></a>4. option+command+F</h3><p>当前文件字符串替换。</p>
 <h3 id="5-Option-command-L"><a href="#5-Option-command-L" class="headerlink" title="5. Option+ command+L"></a>5. Option+ command+L</h3><p>跳到光标所在位置</p>
+<h3 id="6-自定义复制当前行"><a href="#6-自定义复制当前行" class="headerlink" title="6. 自定义复制当前行"></a>6. 自定义复制当前行</h3><p>修改权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 666 /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Resources/IDETextKeyBindingSet.plist</span><br><span class="line">sudo chmod 777 /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Resources/</span><br></pre></td></tr></table></figure></p>
+<p>打开编辑<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open /Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Resources/IDETextKeyBindingSet.plist</span><br></pre></td></tr></table></figure></p>
+<p>找到 <code>Insertions and Indentations</code><br>添加 <code>Duplicate Current Line</code> 以及对应的值 <code>selectLine:, copy:, moveToEndOfLine:, moveToBeginningOfLine:, paste:</code></p>
+<p>重启<code>Xcode</code>, 在设置里边找到 <code>preferences</code>, 搜索 <code>Duplicate Current Line</code>, 然后设置对应的快捷键 <code>CMD+D</code>(可随意设置)即可</p>
 
       
     </div>
@@ -486,7 +490,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Option-点击文件"><span class="nav-number">1.</span> <span class="nav-text">1. Option+点击文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-shift-Option-点击文件"><span class="nav-number">2.</span> <span class="nav-text">2. shift+ Option+点击文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-CTRL-1"><span class="nav-number">3.</span> <span class="nav-text">3. CTRL + 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-option-command-F"><span class="nav-number">4.</span> <span class="nav-text">4. option+command+F</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Option-command-L"><span class="nav-number">5.</span> <span class="nav-text">5. Option+ command+L</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Option-点击文件"><span class="nav-number">1.</span> <span class="nav-text">1. Option+点击文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-shift-Option-点击文件"><span class="nav-number">2.</span> <span class="nav-text">2. shift+ Option+点击文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-CTRL-1"><span class="nav-number">3.</span> <span class="nav-text">3. CTRL + 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-option-command-F"><span class="nav-number">4.</span> <span class="nav-text">4. option+command+F</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Option-command-L"><span class="nav-number">5.</span> <span class="nav-text">5. Option+ command+L</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-自定义复制当前行"><span class="nav-number">6.</span> <span class="nav-text">6. 自定义复制当前行</span></a></li></ol></div>
             
 
           </div>
